@@ -8,7 +8,7 @@ export default function Grid({ products }: { products: Product[] }) {
     return (
         <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {
-                products.map((product) => (
+                products?.map((product) => (
                     <Link href={`/product/${product.handle}`}>
                         <Tile className="flex flex-col justify-center items-center overflow-hidden">
                             <div className="relative aspect-square w-56 h-56 md:w-96 md:h-96"> {/* Ensure this container has a height and width */}

@@ -86,11 +86,24 @@ export type ShopifyMenuOperation = {
 
 export type ShopifyProductsOperation = {
     data: {
-      products: Connection<ShopifyProduct>;
+        products: Connection<ShopifyProduct>;
     };
     variables: {
-      query?: string;
-      reverse?: boolean;
-      sortKey?: string;
+        query?: string;
+        reverse?: boolean;
+        sortKey?: string;
     };
-  };
+};
+
+export type ShopifyCollectionProductsOperation = {
+    data: {
+        collection: {
+            products: Connection<ShopifyProduct>;
+        };
+    };
+    variables: {
+        handle: string;
+        reverse?: boolean;
+        sortKey?: string;
+    };
+};
