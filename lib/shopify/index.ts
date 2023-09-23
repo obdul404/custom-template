@@ -159,6 +159,7 @@ export async function getCollectionProducts({
     sortKey?: string;
 }): Promise<Product[]> {
     const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
+        cache: "no-store",
         query: getCollectionProductsQuery,
         tags: [TAGS.collections, TAGS.products],
         variables: {
