@@ -83,6 +83,12 @@ export type ShopifyMenuOperation = {
         handle: string;
     };
 };
+export type ShopifyProductOperation = {
+    data: { product: ShopifyProduct };
+    variables: {
+        handle: string;
+    };
+};
 
 export type ShopifyProductsOperation = {
     data: {
